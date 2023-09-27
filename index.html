@@ -3,35 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Amarilla</title>
+    <title>Hotline Miami 2</title>
+    <link href="https://fonts.cdnfonts.com/css/shoguns-clan-2" rel="stylesheet">
     <style>
-        /* Estilo para el fondo amarillo */
         body {
             background-color: black;
-        }
-        
-        /* Estilo para el texto verde estilo Matrix */
-        h1 {
-            font-family: "Courier New", monospace;
-            font-size: 24px;
-            color: green;
-            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             overflow: hidden;
-            border-right: 3px solid green;
-            animation: typing 4s steps(20) infinite;
         }
-        
-        @keyframes typing {
+
+        h1 {
+            font-family: "Shoguns Clan", sans-serif;
+            font-size: 48px;
+            color: #00FFFF; /* Azul claro */
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            animation: shakeText 2s ease-in-out infinite, glitchText 2s alternate infinite, colorChange 5s ease-in-out infinite;
+            text-shadow: 0 0 10px white; /* Outline blanco */
+        }
+
+        /* Animación de sacudida */
+        @keyframes shakeText {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                transform: translateX(-5px);
+            }
+            20%, 40%, 60%, 80% {
+                transform: translateX(5px);
+            }
+        }
+
+        /* Animación de efecto "glitch" */
+        @keyframes glitchText {
             0% {
-                width: 0;
+                transform: scale(1);
+                opacity: 1;
             }
             100% {
-                width: 100%;
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        /* Animación de cambio de color */
+        @keyframes colorChange {
+            0% {
+                color: #00FFFF; /* Azul claro */
+            }
+            50% {
+                color: #FF00FF; /* Magenta */
+            }
+            100% {
+                color: #00FFFF; /* Azul claro */
             }
         }
     </style>
 </head>
 <body>
-    <h1>Today's Menu: Ann's Cheese Burger (DO NOT TOUCH)</h1>
+    <h1>Bienvenidos todos al Refugio</h1>
 </body>
 </html>
